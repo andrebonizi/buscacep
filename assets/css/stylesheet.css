@@ -1,0 +1,196 @@
+@font-face{
+    font-family: Raleway-Black;
+    src: url('../fonts/Raleway-Black.ttf') format('truetype');
+
+}
+@font-face{
+    font-family: metropolis-black;
+    src: url('../fonts/metropolis-black-webfont.woff') format('woff'),
+         url('../fonts/metropolis-black-webfont.woff2') format('woff2');
+}
+@font-face{
+    font-family: metropolis-light;
+    src: url('../fonts/metropolis-light-webfont.woff') format('woff'),
+         url('../fonts/metropolis-light-webfont.woff2') format('woff2');
+}
+@font-face{
+    font-family: metropolis-regular;
+    src: url('../fonts/metropolis-regular-webfont.woff') format('woff'),
+         url('../fonts/metropolis-regular-webfont.woff2') format('woff2');
+}
+body{
+    display: flex;
+    overflow: hidden;
+}
+form{
+    position: relative;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 5%;
+    margin-right: 25px;
+    
+}
+.title{
+    font-family: Raleway-Black;
+    font-size: 1.5em;
+    color: red;
+}
+.description{
+    font-family: metropolis-light;
+    color: rgb(134, 134, 134);
+    font-size: .7rem;
+}
+
+form .input-cep:focus ~ label,
+form .input-cep:valid ~ label{
+    transform: translateY(-15px);
+    font-size: .7rem;
+    transition: ease-in 0.2s;
+    color: red;
+}
+form .input-cep:not(focus) ~ label{
+    transition: ease-out 0.2s;
+    color: rgb(200, 200, 200);
+}
+
+.input-cep{
+    font-family: metropolis-regular;
+    padding: 5px;
+    border-style: none;
+    border-bottom: solid rgb(134, 134, 134) 1px;
+    margin-top: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    width: 95%;
+    outline: none;
+}
+.input-cep:focus{
+    outline: none;
+}
+#btn-another-search{
+    display: none;
+}
+.btn{
+    background-color: red;
+    color: whitesmoke;
+    text-align: center;
+    width: 200px;
+    border-radius: 20px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    
+}
+.btn-disabled{
+    background-color: rgb(220, 220, 220);
+    cursor: not-allowed;
+}
+.btn:focus{
+    caret-color: transparent;
+}
+.btn:active{
+    background-color: rgb(151, 7, 7);
+}
+.btn-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    display: none;
+}
+.btn-close:active{
+    background-color: gray;
+}
+.view{
+    border: solid red;
+}
+.ui-helper-hidden-accessible, .ui-helper-accessible, .ui-autocomplete{ 
+    position: absolute;
+    display: none;
+    z-index: 999;
+    left:0; 
+}
+.ui-menu{
+    background:white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px gray;
+    padding: 5px;
+    margin-left: -30px;
+    list-style-type: none;
+}
+.ui-menu-item{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+/*Mobile*/
+    body{
+        flex-direction: column;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    form{
+        width: 90%;
+    }
+    form label{
+        position: absolute;
+        font-family: metropolis-regular;
+        font-size: .9rem;
+        left: 2%;
+        top: 57%;
+    }
+    .view{
+        position: relative;
+        border-width:  10px;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    .map{
+        width: 93%;
+        height: 200px;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+/*Desktop*/
+    body{
+        flex-direction: row;
+        height: 100%;
+    }
+    form{
+        width: 30%;
+    }
+    form label{
+        position: absolute;
+        font-family: metropolis-regular;
+        font-size: .9rem;
+        left: 2%;
+        /*top: 35%;*/
+        top: 90px;
+    }
+    .view{
+        position: relative;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 70%;
+        height: auto;
+        border-width:  60px;
+        padding-top: 70px;
+        padding-bottom: 50px;
+        padding-left: 120px;
+    }
+    .map{
+        width: 80%;
+        height: 220px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+}

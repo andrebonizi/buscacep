@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x:hidden;">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+
+</head>
+
+<body>
+    <form onsubmit="return false;" autocomplete="off">
+            <div class="title">digite um cep</div>
+            <div class="description">Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil</div>
+            <input id="input-cep" class="input-cep" type="text" required/>
+            <label>Cep</label>
+            <br>
+            <button id="btn-search" class="btn">Buscar</button>
+    </form>
+    <div class="view">
+        <div id="logradouro" class="title"></div>
+        <div id="bairro" class="description"></div>
+        <div id="distrito" class="description"></div>
+        <div id="cep" class="description"></div>
+        <div class="map" id="mapa"></div>
+        <button id="btn-another-search" class="btn">Fazer outra busca</button>
+        <button id="btn-close" class="btn-close">x</button>
+    </div>
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    
+</body>
+</html>
